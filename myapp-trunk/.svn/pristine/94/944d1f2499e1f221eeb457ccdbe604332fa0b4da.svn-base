@@ -1,0 +1,22 @@
+数据库地址：
+rds28d037mmw80stcsappublic.mysql.rds.aliyuncs.com
+
+数据库用户
+travel
+数据库密码
+password
+
+1.使用mysql workbench 按照以上信息重新创建一个连接，就可以连接到远程数据库了
+
+
+2.将本机的jdbc.properties文件替换为如下
+driverClassName=com.mysql.jdbc.Driver
+url=jdbc:mysql://rds28d037mmw80stcsap.mysql.rds.aliyuncs.com:3306/travel-db?characterEncoding=UTF-8
+dbuser=travel
+dbpass=password
+initialSize=100
+maxActive=500
+maxIdle=80
+minIdle=80
+minPool=100
+maxPool=1000

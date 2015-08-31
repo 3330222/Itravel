@@ -1,0 +1,7 @@
+image_type_not_valid=image type not valid
+email_not_valid=Email not valid
+email_not_blank=Email must not be blank
+password_not_in_range=passwords must be within 6 - 16 characters
+password_not_blank=password must not be blank
+account_not_in_range=account must be with 4 - 10 characters
+account_not_blank=account must not be blank

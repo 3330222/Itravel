@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="adminInfo" extends="adminlayout">
+
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/admin/backend/info.jsp" />
+	</definition>
+
+	<definition name="routeAudition" extends="adminlayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/admin/routeRight.jsp" />
+		<!-- <put-attribute name="left" value="/WEB-INF/jsp/business/admin/routeLeft.jsp" 
+			/> <put-attribute name="right" value="/WEB-INF/jsp/business/admin/routeRight.jsp" 
+			/> <put-attribute name="header" value="/WEB-INF/jsp/business/admin/adminTop.jsp" 
+			/> -->
+	</definition>
+
+	<definition name="updateImage" extends="adminlayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/admin/pptMgrRight.jsp" />
+	</definition>
+
+
+	<definition name="updateEpicRoute" extends="adminlayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/admin/epicMgrRight.jsp" />
+	</definition>
+
+	<definition name="userAudition" extends="adminlayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/admin/userRight.jsp" />
+	</definition>
+</tiles-definitions>

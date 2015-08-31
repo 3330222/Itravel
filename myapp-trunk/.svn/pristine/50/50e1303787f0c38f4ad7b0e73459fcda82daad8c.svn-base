@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="baselayout" template="/WEB-INF/jsp/template/BaseTemplate.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/share/frame/header.jsp" />
+		<put-attribute name="left" value="/WEB-INF/jsp/system/frame/left.jsp" />
+		<put-attribute name="right"
+			value="/WEB-INF/jsp/system/frame/right.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/share/frame/footer.jsp" /> 
+	</definition>
+
+	<definition name="popuplayout" template="/WEB-INF/jsp/template/BaseTemplate.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/business/employee/index.jsp" />
+		<put-attribute name="left" value="/WEB-INF/jsp/system/frame/left.jsp" />
+		<put-attribute name="right"
+			value="/WEB-INF/jsp/system/frame/right.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/business/employee/index.jsp" />
+	</definition>
+
+	<definition name="indexlayout" template="/WEB-INF/jsp/template/MainTemplate.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/share/frame/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/share/frame/footer.jsp" />
+	</definition>
+
+	<definition name="simple_layout" extends="indexlayout">
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/share/frame/simple_header.jsp" />
+	</definition>
+
+	<definition name="triplelayout" template="/WEB-INF/jsp/template/OrderTemplate.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/share/frame/header.jsp"  />
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/system/frame/leftBlank.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/share/frame/footer.jsp"  />
+	</definition>
+
+	<definition name="hostelayout" template="/WEB-INF/jsp/template/HostelTemplate.jsp">
+	   <put-attribute name="header"
+			value="/WEB-INF/jsp/share/frame/header.jsp" />
+		<put-attribute name="menu"
+			value= "/WEB-INF/jsp/business/route/hotelmenu.jsp"/>
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/system/frame/leftBlank.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/share/frame/footer.jsp" />
+	</definition>
+	
+	<definition name="viewlayout" template="/WEB-INF/jsp/template/ViewTemplate.jsp">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/system/frame/leftBlank.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/system/frame/foot.jsp" />
+	</definition>
+	
+	<definition name="adminlayout" template="/WEB-INF/jsp/template/AdminTemplate.jsp">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/system/frame/leftBlank.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/business/admin/backend/menu.jsp" /> 
+	</definition>
+
+</tiles-definitions>

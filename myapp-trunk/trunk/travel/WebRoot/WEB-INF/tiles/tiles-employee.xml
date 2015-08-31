@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  
+   <definition name="xxx"  extends="baselayout">
+        <put-attribute name="left"    
+            value="/WEB-INF/jsp/business/employee/index.jsp" />
+    </definition>
+    
+    <definition name="employee_json"  extends="baselayout">
+        <put-attribute name="left"
+            value="/WEB-INF/jsp/business/employee/jsonTest.jsp" />
+            
+        <put-attribute name="right"
+             value="/WEB-INF/jsp/system/frame/right.jsp" />
+    </definition>
+    
+    <definition name="fileuploadindex"  extends="baselayout">
+        <put-attribute name="left"
+            value="/WEB-INF/jsp/business/employee/jsonTest.jsp" />
+            
+        <put-attribute name="right"
+             value="/WEB-INF/jsp/business/employee/upload-file.jsp" />
+       
+    </definition>
+    
+     <definition name="jqueryuiclient"  extends="baselayout">
+        <put-attribute name="left"
+            value="/WEB-INF/jsp/business/employee/jsonTest.jsp" />
+            
+        <put-attribute name="right"
+             value="/WEB-INF/jsp/business/employee/jqueryTest.jsp" />
+    </definition>
+    
+     <definition name="jqueryPopupWindow"  extends="baselayout">
+        <put-attribute name="left"
+            value="/WEB-INF/jsp/business/employee/MyJsp.jsp" />
+            
+        <put-attribute name="right"
+             value="/WEB-INF/jsp/business/employee/popupWindowTest.jsp" />
+    </definition>
+   
+</tiles-definitions>

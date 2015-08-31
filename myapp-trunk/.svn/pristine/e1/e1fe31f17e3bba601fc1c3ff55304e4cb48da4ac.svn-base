@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+.gallery {
+	list-style-type: none;
+	float: left;
+	background: #ffffff;
+	padding: 20px 20px 10px 20px;
+	margin: 0;
+}
+
+.gallery li {
+	float: left;
+	padding: 0 10px 10px 0;
+}
+
+.gallery li:nth-child(6n) {
+	padding-right: 0;
+}
+
+.gallery li a, .gallery li img {
+	float: left;
+	width: 100px;
+	height: 100px;
+}

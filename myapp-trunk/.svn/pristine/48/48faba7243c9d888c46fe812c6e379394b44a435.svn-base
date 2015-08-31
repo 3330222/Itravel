@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+
+select {
+	padding: 3px;
+	/* width:100px; */
+	margin: 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+	-moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+	box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+	background: #f8f8f8;
+	color: #888;
+	border: none;
+	outline: none;
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	select {
+		padding-right: 18px
+	}
+}
+
+label {
+	position: relative;
+}
+
+label:after {
+	content: '🔽️';
+	font: 11px "Consolas", monospace;
+	color: #aaa;
+	right: 8px;
+	top: 2px;
+	padding: 0 0 2px;
+	border-bottom: 1px solid #ddd;
+	position: absolute;
+	pointer-events: none;
+}
+
+label:before {
+	content: '';
+	right: 6px;
+	top: 0px;
+	height: 20px;
+	background: #f8f8f8;
+	position: absolute;
+	pointer-events: none;
+	display: block;
+}
+
+.choose {
+	width: 350px;
+	height: 300px;
+	padding-top: 100px;
+	font-size: 20px;
+}
+
+.unchoose {
+	display: none;
+}
+
+.disable {
+	visibility: hidden;
+}
+.error{
+	border: 1px solid red;
+}
+#tyear{
+	width: 200px;
+}
+#tyear select{
+	width: 200px;
+}
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="yyyyyy" extends="baselayout">
+		<put-attribute name="left"
+			value="/WEB-INF/jsp/business/employee/sssssssssssssss.jsp" />
+	</definition>
+
+	<definition name="createroute" extends="hostelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/route/newRoute.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="verifyhostel" extends="hostelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/route/verifyHostel.jsp"></put-attribute>
+	</definition>
+
+	<definition name="displayroutes" extends="hostelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/route/display.jsp" />
+	</definition>
+	
+	<definition name="Ordersview" extends="hostelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/hostel/vieworders.jsp" />
+	</definition>
+
+	<definition name="preview" extends="viewlayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/route/preview.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/business/route/prefoot.jsp" />
+	</definition>
+	
+	<definition name="displayorders" extends="hostelayout">
+		<put-attribute name="content" value="/WEB-INF/jsp/business/order/display.jsp" />
+	</definition>
+	
+		
+	<definition name="setting" extends="hostelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/route/setting.jsp" />
+	</definition>
+		
+	<definition name="homepage" extends="indexlayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/hostel/homepage.jsp" />
+	</definition>
+	
+	<definition name="ShowRoute" extends="indexlayout">
+	  <!--  <put-attribute name="header"
+			value="/WEB-INF/jsp/system/frame/header.jsp" /> -->
+		 <put-attribute name="content"
+			value="/WEB-INF/jsp/business/route/preview.jsp" /> 
+	</definition>
+	
+	<definition name="tourPreview" extends="indexlayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/TourPreview.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>

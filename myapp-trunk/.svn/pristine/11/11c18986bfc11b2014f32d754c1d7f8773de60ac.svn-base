@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+body {
+	/* background: white;
+	height: 100%; */
+}
+
+.snow {
+	position: absolute;
+	top: 0;
+	color: #fff;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -10;
+	background: url('/resource/image/1.jpg');
+	background-size: cover;
+	-webkit-transition: background 2s ease-in-out;
+	/* For Safari 3.1 to 6.0 */
+	transition: background 2s ease-in-out;
+}
+.content {
+    position: relative;
+	top: 0px;
+	margin-left: 10%;
+	width: 80%;
+	height: 100%;
+	opacity: 1;
+	padding-top: 20px;	
+}
+.content .col-md-3{
+  text-align: right;
+   padding-right: 20px;
+}
+
+/* .row .col-md-3 {
+	text-align: right;
+	font-size: 20px;
+} */
+
+.subpart {
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+.upload {
+	border: 0.3 px thin gray;
+	border-style: dotted;
+	width: 150px;
+	height: 150px;
+	font-size: 30px;
+	background-color: gray;
+}
+
+.upimage {
+	font-size: 15px;
+	opacity: 0;
+	width: 120px;
+	height: 150px;
+	cursor: pointer;
+}

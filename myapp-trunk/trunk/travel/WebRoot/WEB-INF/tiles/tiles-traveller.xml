@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="makeOrder" extends="triplelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/orderContent.jsp" />
+	</definition>
+	
+	<definition name="OrderDetail" extends="triplelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/orderDetail.jsp" />
+	</definition>
+	
+	<definition name="pay" extends="triplelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/payPage.jsp" />
+	</definition>
+	
+	<definition name="personalTravel" extends="triplelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/TourDIY.jsp" />
+	</definition>
+	
+	<definition name="personalTourDIY" extends="hostelayout">
+		<!-- <put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/personalTourDIY.jsp" /> -->
+					<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/personalTourDIY.jsp" />
+	</definition>
+	
+    <definition name="personalInfo" extends="hostelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/personalInfoRight.jsp" />
+	</definition>
+
+	<definition name="personalOrder" extends="hostelayout">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/personalOrders.jsp" />
+	</definition>
+	
+	<definition name="findPartner" extends="hostelayout">
+		 <put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/findPartner.jsp" />
+	</definition>
+	
+	<definition name="myPartner" extends="hostelayout">
+	     <put-attribute name="content"
+			value="/WEB-INF/jsp/business/personal/myPartner.jsp" />
+	</definition>
+</tiles-definitions>

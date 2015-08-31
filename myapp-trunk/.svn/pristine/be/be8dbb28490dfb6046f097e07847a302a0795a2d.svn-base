@@ -1,0 +1,231 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/WEB-INF/jsp/share/tagLibs.jsp"%>
+
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+	
+	int counter = 1;
+%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<base target="mainframe">
+<link rel="stylesheet" href="/resource/css/jquery/jquery-ui.css">
+<script src="/resource/js/jquery/jquery-2.1.1.js">
+	
+</script>
+<script src="/resource/js/jquery/jquery-ui.js">
+	
+</script>
+<script src="/resource/js/jquery/jquery.bpopup.js">
+	
+</script>
+<script src="/resource/js/core/syscore-1.0.js">
+	
+</script>
+<style>
+.tab:hover, .active {
+	background-color: #ccc;
+	color: #ffe100;
+}
+
+.main {
+	position: absolute;
+	width: 100%;
+}
+
+.left {
+	float: left;
+	margin-left: 10%;
+	color: #ff0000;
+	width: 60%;
+	font-size: 2.5em;
+}
+
+.right {
+	float: left;
+	width: 30%;
+}
+
+.right div {
+	margin-bottom: 10px;
+}
+
+span {
+	padding-left: 20px;
+}
+
+.viewDate {
+	padding-top: 20px;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.rowList {
+	position: relative;
+	border: 1px solid #eee;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tr {
+	border-bottom: 1px solid #eee;
+}
+
+tr.routeTitle {
+	border-bottom: 1px solid #333333;
+}
+
+.rowList>div {
+	float: left;
+	padding: 5px;
+}
+
+.col-1, .col-2, .col-3 {
+	width: 28%;
+	z-index: 10;
+}
+
+.col-4 {
+	width: 16%;
+	z-index: 10;
+}
+
+#dateList {
+	padding-top: 100px;
+	z-index: 8
+}
+
+.selector {
+	padding: 5;
+	width: 150px;
+	border-radius: 5px;
+	border: 2px solid orange;
+	z-index: 1000
+}
+
+.ulTest ul {
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 9px;
+	border: 1px solid yellow;
+	border-radius: 5px;
+	position: absolute;
+	top: 50px;
+	left: 20%;
+	background: white;
+	z-index: 1000
+}
+
+.ulTest li {
+	width: 125px;
+	padding: 5px;
+	z-index: 1000
+}
+
+.ulTest a {
+	width: 125px;
+	z-index: 1000
+}
+
+.ulTest:hover>ul>li:hover {
+	background: #e9e9e9;
+	z-index: 1000
+}
+
+.ulTest:hover>ul>li:hover>a {
+	color: red;
+	z-index: 1000
+}
+</style>
+
+<script >
+$(function(){
+	$("#dialog").dialog({
+		autoOpen : false,
+		width : 700,
+		height : 500,
+		draggable : false,
+		resizable : false,
+		modal : true,
+	})
+	$('input:checkbox[name=indexs]').each(function(){
+	    	if($(this).val().indexOf("1003") >= 0)
+	    		$(this).prop("checked",true);
+	    })
+	
+})
+function view(x) {
+		$("#dialog").dialog("open");
+		$("#pic").attr("src",$("#pic"+x).val())
+	};
+</script>
+
+
+</head>
+<body>
+	<div class="viewDate">
+		<h1>主页幻灯片管理</h1>
+		<form:form action="/admin/updateImageType" method="post">
+		<div class="pagination-page">
+		<table style="width: 100%;">
+			<thead>
+			<tr class="routeTitle">
+				<td>路线名</td>
+				<td>创建日期</td>
+				<td>结束日期</td>
+				<td>是否主页精品</td>
+				<td>是否幻灯片路线</td>
+			</tr>
+			</thead>
+			</tbody>
+			<c:forEach items="${result1}" var="route" varStatus="status">
+				
+						<tr class="routeElement">
+							<td>${route.name}</td>
+							<td>${route.cTime.toString()}</td>
+							<td>${route.eTime}</td>
+							<c:choose>
+								<c:when test="${route.routetype == '1001'}">
+									<td>是</td>
+								</c:when>
+								<c:otherwise>
+									<td>否</td>
+								</c:otherwise>
+							</c:choose>
+							<c:choose>
+								<c:when test="${route.routetype == '1003'}">
+									<td>是</td>
+								</c:when>
+								<c:otherwise>
+									<td>否</td>
+								</c:otherwise>
+							</c:choose>
+							<td><input type="checkbox" value="${route.routetype}-${route.routeid}" name="indexs"/></td>
+							
+							<td style="text-align: right;"><button type="button" onclick="view( ${status.index } )">图片预览</button></td>
+						</tr>
+						<input type="hidden" value="${route.themeImageUrl }"
+							id="pic${status.index}">
+
+			</c:forEach>
+			</tbody>
+		</table>
+		</div>
+		<div style="text-align:center;margin-top:20px;">
+			<input type="submit" value="状态改为精品路线" id="submitBtn"/>
+		</div>
+		</form:form>
+	</div>
+	<div id="dialog" title="图片预览" class="form-horizontal">
+		<img id="pic" src=""></img>
+	</div>
+</body>
+</html>

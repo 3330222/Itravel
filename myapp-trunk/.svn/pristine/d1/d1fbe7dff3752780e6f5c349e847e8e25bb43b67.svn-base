@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<persistence version="2.1" 
+     xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence 
+                         http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd">
+  
+   <persistence-unit name="travel" transaction-type="RESOURCE_LOCAL">
+   
+   <!--  
+      <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+     
+      <class>com.myrent.data.entity.TbCsmEmployeeBO</class>
+      <properties>
+           <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
+           <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+      </properties>
+      -->
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+      <properties>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+         <property name="hibernate.max_fetch_depth" value="3"/>
+	     <property name="hibernate.jdbc.fetch_size" value="18"/>
+	     <property name="hibernate.jdbc.batch_size" value="10"/>	
+      </properties>
+      
+   </persistence-unit>
+</persistence>
